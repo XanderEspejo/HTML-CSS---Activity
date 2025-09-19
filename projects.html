@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title> Projects - DerTech </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="backlog.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Varela+Round&display=swap" rel="stylesheet">
+
+    <style>
+
+      main {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .sectiondesign {
+        text-align: center;
+        font-size: 38px;
+        font-weight: bold;
+        color: rgb(254, 199, 36);
+        margin-bottom: 40px;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+        gap: 26px;
+        justify-content: center;
+      }
+
+      .project-section {
+        background: #1a1a40;
+        border-radius: 12px;
+        padding: 18px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        transition: transform 0.28s ease, box-shadow 0.28s ease;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+        text-align: center;
+        max-width: 320px;
+         font-family: 'Varela Round', sans-serif;
+      }
+
+      .project-section:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 30px rgba(254, 199, 36, 0.15);
+      }
+
+      .project-section h3 {
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(254, 199, 36);
+        margin: 0;
+        text-align: center;
+      }
+
+      .project-desc {
+        font-size: 14px;
+        line-height: 1.5;
+        color: #e6e6ef;
+        text-align: center;
+      }
+
+      .project-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+      }
+
+      .project-gallery img {
+        width: 100%;
+        max-width: 250px;
+        border-radius: 10px;
+        transition: transform 0.28s ease, box-shadow 0.28s ease;
+        cursor: pointer;
+        object-fit: cover;
+      }
+
+      .project-gallery img:hover {
+        transform: scale(1.06);
+        box-shadow: 0 8px 26px rgba(254, 199, 36, 0.18);
+      }
+
+      .bluelccm {
+        color: rgb(156, 186, 248);
+        font-size: 13px;
+      }
+
+      .white {
+        color: white;
+      }
+
+      .capstone-facultyhub {
+        color: orange;
+        font-size: 14px;
+      }
+
+      .orange-activity {
+        color: orange;
+        font-size: 14px;
+      }
+
+      @media (max-width: 1100px) {
+        .projects-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      #lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.9);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        flex-direction: column;
+      }
+
+      #lightbox img {
+        max-width: 90%;
+        max-height: 80%;
+        border-radius: 10px;
+      }
+
+      #lightbox span.close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+    </style>
+
+</head>
+
+<body>
+
+  <nav>
+    <a href="home.html"><div class="logo"> DerTech </div></a>
+    <ul>
+      <li><a href="home.html"> Home </a></li>
+      <li><a href="about.html"> About </a></li>
+      <li><a href="resume.html"> Resume </a></li>
+      <li><a href="projects.html" class="active"> Projects </a></li>
+      <li><a href="skills.html"> Skills </a></li>
+      <li><a href="achievements.html"> Achievements </a></li>
+      <li><a href="experience.html"> Experience </a></li>
+      <li><a href="extracurricular.html"> Leadership </a></li>
+      <li><a href="gallery.html"> Gallery </a></li>
+      <li><a href="contact.html"> Contact </a></li>
+    </ul>
+  </nav>
+
+  <main class="page-main">
+    <section id="projects">
+
+      <h2 class="sectiondesign"> Projects </h2>
+
+      <div class="projects-grid">
+
+        <div class="project-section">
+          <h3>
+            <span class="bluelccm"> La Consolacion College Manila </span>
+            <br>
+            <span class="white"> "Tourism Website" </span> <br> <span class="orange-activity"> Activity </span>
+          </h3>
+    
+          <p class="project-desc">
+            Tasked in my Grade 11 ICT class to create a tourism website for a specific tourist spot in the Philippines. <br>
+            I chose Siargao and built a website that highlights everything about it.
+          </p>
+
+          <div class="project-gallery">
+            <img src="tourism1.PNG" alt="Tourism Website Screenshot 1">
+            <img src="tourism2.PNG" alt="Tourism Website Screenshot 2">
+            <img src="tourism3.PNG" alt="Tourism Website Screenshot 3">
+            <img src="tourism4.PNG" alt="Tourism Website Screenshot 4">
+            <img src="tourism5.PNG" alt="Tourism Website Screenshot 5">
+            <img src="tourism6.PNG" alt="Tourism Website Screenshot 6">
+          </div>
+        </div>
+
+
+        <div class="project-section">
+          <h3>
+            <span class="bluelccm"> La Consolacion College Manila </span>
+            <br>
+            <span class="white"> "Faculty Hub" </span> <br> <span class="capstone-facultyhub"> Capstone </span>
+          </h3>
+
+          <p class="project-desc">
+            A centralized web-based platform for managing faculty data and resources,
+            serving as a database and cloud storage for senior high school teachers'
+            academic materials and promoting collaboration among them.
+          </p>
+
+          <div class="project-gallery">
+            <img src="hub1.jpg" alt="Faculty Hub Screenshot 1">
+            <img src="hub2.jpg" alt="Faculty Hub Screenshot 2">
+            <img src="hub3.jpg" alt="Faculty Hub Screenshot 3">
+            <img src="hub4.jpg" alt="Faculty Hub Screenshot 4">
+            <img src="hub5.jpg" alt="Faculty Hub Screenshot 5">
+            <img src="hub6.jpg" alt="Faculty Hub Screenshot 6">
+          </div>
+        </div>
+
+  
+        <div class="project-section">
+          <h3>
+            <span class="bluelccm"> La Consolacion College Manila </span>
+            <br>
+            <span class="white"> "My Website" </span> <br> <span class="orange-activity"> Activity </span>
+          </h3>
+
+          <p class="project-desc">
+            Created for my Grade 11 ICT class, this website serves as a digital portfolio
+            where I introduce myself and detail my personal and academic background.
+          </p>
+
+          <div class="project-gallery">
+             <img src="tech1.jpg" alt="My Website Screenshot 1">
+             <img src="tech2.jpg" alt="My Website Screenshot 2">
+             <img src="tech3.jpg" alt="My Website Screenshot 3">
+             <img src="tech4.jpg" alt="My Website Screenshot 4">
+             <img src="tech5.jpg" alt="My Website Screenshot 5">
+             <img src="tech6.jpg" alt="My Website Screenshot 6">
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div id="lightbox">
+    <span class="close">&times;</span>
+    <img src="" alt="Preview">
+  </div>
+
+<br>
+<br>
+<br>
+<br>
+
+  <footer class="yellow">
+        <span class="whitename"> Xander Nazzer D. Espejo </span>
+        <span class="separator"> | </span>
+        Bachelor of Science in Computer Science
+  </footer>
+
+  <script>
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const closeBtn = lightbox.querySelector('.close');
+    const galleryImages = document.querySelectorAll('.project-gallery img');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+    });
+
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>

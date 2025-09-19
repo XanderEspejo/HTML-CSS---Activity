@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title> Experience - DerTech </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="suitcase.png">
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+  <style>
+
+    main {
+      max-width: 1096px;
+      margin: 0 auto;
+      padding: 10px 20px;
+    }
+
+    h2.sectiondesign {
+      text-align: center;
+      font-size: 36px;
+      color: rgb(254, 199, 36);
+      margin-top: 8px;
+      margin-bottom: 1.2rem;
+      display: inline-block;
+      padding-bottom: 8px;
+      width: 100%;
+    }
+
+    .experience {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 40px;
+    }
+
+    .left-section,
+    .right-section {
+      background: #1a1a40;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .left-section:hover,
+    .right-section:hover {
+      box-shadow: 0 0px 30px rgba(240, 215, 140, 0.6);
+      transform: translateY(-5px);
+    }
+
+    .left-section h3,
+    .right-section h3 {
+      margin-bottom: 18px;
+      font-size: 22px;
+      color: rgb(254, 199, 36);
+      text-align: center;
+      border-left: none;
+      padding-left: 0;
+    }
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 350px;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 18px;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      opacity: 0;
+      transition: all 0.6s ease;
+      border-radius: 10px;
+    }
+
+    .carousel img.active {
+      left: 0;
+      opacity: 1;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 14px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 20px;
+      user-select: none;
+      transition: background 0.3s;
+    }
+
+    .arrow:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .arrow-left {
+      left: 10px;
+    }
+
+    .arrow-right {
+      right: 10px;
+    }
+
+    .description,
+    .description-list {
+      font-size: 15px;
+      color: #d1d1e0;
+      line-height: 1.6;
+    }
+
+    .description ul,
+    .description-list ul {
+      margin: 10px 0 0 15px;
+      padding: 0;
+      list-style: none; 
+    }
+
+    .description ul li,
+    .description-list li {
+      margin-bottom: 6px;
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .description ul li::before,
+    .description-list li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #f5c518;
+      font-size: 14px;
+    }
+
+    .apparel-image {
+      margin-top: 20px;
+      width: calc(100% - 20px);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .apparel-image:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px rgba(254, 199, 36, 0.7);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 12px;
+      box-shadow: none;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .modal-close:hover {
+      color: #f5c518;
+    }
+
+    @media screen and (max-width: 768px) {
+      .experience {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <nav>
+    <a href="home.html"><div class="logo"> DerTech </div></a>
+      <ul>
+        <li><a href="home.html"> Home </a></li>
+        <li><a href="about.html"> About </a></li>
+        <li><a href="resume.html"> Resume </a></li>
+        <li><a href="projects.html"> Projects </a></li>
+        <li><a href="skills.html"> Skills </a></li>
+        <li><a href="achievements.html"> Achievements </a></li>
+        <li><a href="experience.html" class="active"> Experience </a></li>
+        <li><a href="extracurricular.html"> Leadership </a></li>
+        <li><a href="gallery.html"> Gallery </a></li>
+        <li><a href="contact.html"> Contact </a></li>
+      </ul>
+  </nav>
+
+  <main class="page-main">
+    <section id="experience">
+      <h2 class="sectiondesign"> Experience </h2>
+      <br>
+      <br>
+      <div class="experience">
+
+        <div class="left-section">
+          <h3 class="sectiondesign"> Internship <br> Department of Public Services (DPS) </h3>
+          <div class="carousel">
+            <img src="dps4.jpg" class="active" alt="Internship Work 4">
+            <img src="dps3.jpg" alt="Internship Work 3">
+            <img src="dps2.jpg" alt="Internship Work 2">
+            <img src="dps1.jpg" alt="Internship Work 1">
+            <img src="dps5.jpg" alt="Internship Work 5">
+            <span class="arrow arrow-left">&#10094;</span>
+            <span class="arrow arrow-right">&#10095;</span>
+          </div>
+
+          <div class="description">
+            <p> I have experience in office works, including: </p>
+            <ul>
+              <li> Sorting files using Excel </li>
+              <li> Organizing and filing documents </li>
+              <li> Managing documentation and records for individual barangays </li>
+              <li> Supporting general administrative duties </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="right-section">
+          <h3 class="sectiondesign"> Apparel <br> Graphic Design </h3>
+          <div class="description-list">
+            &nbsp;&nbsp; <img src="nstppoloshirt.jpg" alt="Apparel Design Image" class="apparel-image" id="apparelImg">
+            <br>
+            <br>
+            <ul>
+              <li> Designed for La Consolacion College Manila NSTP program </li>
+              <li> Created visually appealing concepts that reflect school identity </li>
+              <li> Prepared designs optimized for printing and production </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+  
+    </section>
+  
+  </main>
+  
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <footer class="yellow">
+    <span class="whitename"> Xander Nazzer D. Espejo </span>
+    <span class="separator"> | </span>
+    Bachelor of Science in Computer Science
+  </footer>
+
+ 
+  <script>
+   
+    const carousel = document.querySelector('.carousel');
+    const images = carousel.querySelectorAll('img');
+    const prevBtn = carousel.querySelector('.arrow-left');
+    const nextBtn = carousel.querySelector('.arrow-right');
+    let index = 0;
+
+    function showSlide(n) {
+      images.forEach(img => img.classList.remove('active'));
+      images[n].classList.add('active');
+    }
+
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % images.length;
+      showSlide(index);
+    });
+
+    prevBtn.addEventListener('click', () => {
+      index = (index - 1 + images.length) % images.length;
+      showSlide(index);
+    });
+
+    const apparelImg = document.getElementById('apparelImg');
+
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+    const modalContent = document.createElement('img');
+    modalContent.classList.add('modal-content');
+    const modalClose = document.createElement('span');
+    modalClose.classList.add('modal-close');
+    modalClose.innerHTML = '&times;';
+    modal.appendChild(modalClose);
+    modal.appendChild(modalContent);
+    document.body.appendChild(modal);
+
+    apparelImg.addEventListener('click', () => {
+      modal.style.display = 'block';
+      modalContent.src = apparelImg.src;
+    });
+
+    modalClose.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title> Contact - DerTech </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="phone.png">
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  
+  <style>
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      font-family: 'Varela Round', sans-serif;
+      padding: 20px;
+    }
+
+    #contact {
+      text-align: center;
+      padding: 36px 20px; 
+      background: rgba(0,0,0,0.05);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    #contact h2 {
+      font-size: 36px;
+      color: rgb(254, 199, 36);
+      margin-bottom: 20px;
+    }
+
+    #contact p.intro {
+      font-size: 18px;
+      color: #e6e6ef;
+      margin-bottom: 25px;
+    }
+
+    .contact {
+      display: flex;
+      justify-content: center;
+      gap: 40px; 
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .contact-item {
+      text-align: center;
+    }
+
+    .contact a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+      padding: 12px 20px;
+      font-size: 16px;
+      color: #fff;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .contact a i {
+      margin-right: 8px;
+    }
+
+    .contact a.gmail {
+      background: #D44638;
+    }
+    .contact a.facebook {
+      background: #1877F2;
+    }
+    .contact a.instagram {
+      background: #E1306C;
+    }
+
+    .contact a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+
+    .contact-text {
+      font-size: 14px;
+      color: #d1d1e0;
+    }
+
+    form {
+      margin-top: 40px;
+      text-align: left;
+      background: #1a1a40;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: none;
+      font-size: 14px;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .btn {
+      background: #6a0dad; 
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #8e24aa;  
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+
+    .btn-container {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .contact {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <nav>
+    <a href="home.html"><div class="logo"> DerTech </div></a>
+    <ul>
+      <li><a href="home.html"> Home </a></li>
+      <li><a href="about.html"> About </a></li>
+      <li><a href="resume.html"> Resume </a></li>
+      <li><a href="projects.html"> Projects </a></li>
+      <li><a href="skills.html"> Skills </a></li>
+      <li><a href="achievements.html"> Achievements </a></li>
+      <li><a href="experience.html"> Experience </a></li>
+      <li><a href="extracurricular.html"> Leadership </a></li>
+      <li><a href="gallery.html"> Gallery </a></li>
+      <li><a href="contact.html" class="active"> Contact </a></li>
+    </ul>
+  </nav>
+
+<main class="page-main">
+  <section id="contact">
+    <h2 class="sectiondesign"> Contact </h2>
+    <br>
+    <p class="intro"> Let's connect and collaborate! Reach out through any of the platforms below: </p>
+    
+    <div class="contact">
+      <div class="contact-item">
+        <a href="mailto:xanderespejo110506@gmail.com" target="_blank" class="gmail">
+          <i class="fas fa-envelope"></i> Gmail
+        </a>
+        <div class="contact-text"> xanderespejo110506@gmail.com </div>
+      </div>
+
+      <div class="contact-item">
+        <a href="https://www.facebook.com/xander.espejo.2024" target="_blank" class="facebook">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <div class="contact-text"> Xander Espejo </div>
+      </div>
+
+      <div class="contact-item">
+        <a href="https://www.instagram.com/dersuuuii/" target="_blank" class="instagram">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <div class="contact-text"> @dersuuuii </div>
+      </div>
+    </div>
+
+    <form onsubmit="event.preventDefault(); alert('Thanks for your message! 😊');">
+      <div class="grid">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+      </div>
+      <textarea placeholder="Your Message" required></textarea>
+      <div class="btn-container">
+        <button class="btn" type="submit"> Send Message </button>
+      </div>
+    </form>
+  </section>
+</main>
+
+
+<footer class="yellow">
+  <span class="whitename"> Xander Nazzer D. Espejo </span>
+  <span class="separator"> | </span>
+  Bachelor of Science in Computer Science
+</footer>
+
+
+</body>
+
+</html>

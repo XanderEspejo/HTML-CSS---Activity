@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title> Resume - DerTech </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="user-profile.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Varela+Round&display=swap" rel="stylesheet">
+
+    <style>
+
+      .resume-image img {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .resume-image img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0px 20px rgba(254, 199, 36, 0.6); 
+      }
+
+      #lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.9);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        flex-direction: column;
+      }
+
+      #lightbox img {
+        max-width: 90%;
+        max-height: 80%;
+        border-radius: 10px;
+      }
+
+      #lightbox span.close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+    </style>
+
+</head>
+
+<body>
+
+  <nav>
+    <a href="home.html"><div class="logo"> DerTech </div></a>
+    <ul>
+      <li><a href="home.html"> Home </a></li>
+      <li><a href="about.html"> About </a></li>
+      <li><a href="resume.html" class="active"> Resume </a></li>
+      <li><a href="projects.html"> Projects </a></li>
+      <li><a href="skills.html"> Skills </a></li>
+      <li><a href="achievements.html"> Achievements </a></li>
+      <li><a href="experience.html"> Experience </a></li>
+      <li><a href="extracurricular.html"> Leadership </a></li>
+      <li><a href="gallery.html"> Gallery </a></li>
+      <li><a href="contact.html"> Contact </a></li>
+    </ul>
+  </nav>
+
+  <main class="page-main">
+
+    <section id="resume">
+      <h2 class="sectiondesign"> Resume </h2>
+      <div class="resume-container">
+       
+        <div class="resume-image">
+          <img src="ESPEJO, Xander - RESUME - PIC.png" alt="Resume Preview">
+        </div>
+        
+        <div class="resume-content">
+          <p> Click here to download my resume: </p>
+          <a href="ESPEJO, Xander - RESUME.pdf" class="btn" download> Download My Resume </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+<br>
+<br>
+<br>
+<br>
+
+  <div id="lightbox">
+    <span class="close">&times;</span>
+    <img src="" alt="Preview">
+  </div>
+
+  <footer class="yellow">
+        <span class="whitename"> Xander Nazzer D. Espejo </span>
+        <span class="separator"> | </span>
+        Bachelor of Science in Computer Science
+  </footer>
+
+
+  <script>
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const closeBtn = lightbox.querySelector('.close');
+    const resumeImg = document.querySelector('.resume-image img');
+
+    resumeImg.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = resumeImg.src;
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+    });
+
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>

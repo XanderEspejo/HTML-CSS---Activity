@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title> Achievements - DerTech </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="medal.png">
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+  <style>
+    
+    main {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 8px 20px;
+      font-family: 'Varela Round', sans-serif;
+    }
+
+    h2.sectiondesign {
+      text-align: center;
+      font-size: 36px;
+      color: rgb(254, 199, 36);
+      margin: 0.4rem 0 1rem !important;
+      padding-top: 0;
+    }
+
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      justify-content: center;
+    }
+
+    @media (max-width: 1100px) {
+      .achievements-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .achievements-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .achievement-section {
+      background: #1a1a40;
+      border-radius: 15px;
+      padding: 24px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .achievement-section:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(254, 199, 36, 0.12);
+    }
+
+    .achievement-section h3 {
+      font-size: 20px;
+      color: rgb(254, 199, 36);
+      margin: 0;
+      padding-left: 8px;
+      border-left: 5px solid rgb(254, 199, 36);
+      line-height: 1.2;
+    }
+
+    .achievement-list {
+      margin: 0 0 0 1.25rem;
+      padding: 0;
+      list-style: disc;
+    }
+
+    .achievement-list li {
+      margin-bottom: 8px;
+      font-size: 14.5px;
+      color: #e6e6ef;
+    }
+
+    .media-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .media-gallery a {
+      display: block;
+      border-radius: 10px;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .media-gallery img,
+    .media-gallery video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+      cursor: pointer;
+      object-fit: cover;
+    }
+
+    .media-gallery img:hover,
+    .media-gallery video:hover {
+      transform: scale(1.04);
+      box-shadow: 0 8px 26px rgba(254, 199, 36, 0.18);
+    }
+
+    .basket-small-pair {
+      display: flex;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .basket-small-pair a {
+      flex: 1;
+    }
+
+    .basket-small-pair a img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 520px) {
+      .basket-small-pair {
+        flex-direction: column;
+      }
+    }
+
+    #lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    #lightbox img {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+
+    #lightbox span.close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    #lightbox span.close:hover {
+      color: rgb(254, 199, 36);
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <nav>
+    <a href="home.html"><div class="logo"> DerTech </div></a>
+      <ul>
+        <li><a href="home.html"> Home </a></li>
+        <li><a href="about.html"> About </a></li>
+        <li><a href="resume.html"> Resume </a></li>
+        <li><a href="projects.html"> Projects </a></li>
+        <li><a href="skills.html"> Skills </a></li>
+        <li><a href="achievements.html" class="active"> Achievements </a></li>
+        <li><a href="experience.html"> Experience </a></li>
+        <li><a href="extracurricular.html"> Leadership </a></li>
+        <li><a href="gallery.html"> Gallery </a></li>
+        <li><a href="contact.html"> Contact </a></li>
+    </ul>
+  </nav>
+
+  <main class="page-main">
+    <section id="achievements">
+      <h2 class="sectiondesign"> Achievements </h2>
+      <br>
+
+      <div class="achievements-grid">
+
+        <div class="achievement-section">
+          <h3> 🎓 Academic Achievements </h3>
+          <ul class="achievement-list">
+            <li>Grade 1 - TOP 4 OVERALL</li>
+            <li>Grade 2 - TOP 3 OVERALL</li>
+            <li>Grade 3 - TOP 7 OVERALL</li>
+            <li>Grade 4 - TOP 8 OVERALL</li>
+            <li>Grade 5 - TOP 5 OVERALL</li>
+            <li>Grade 6 - TOP 5 OVERALL</li>
+            <li>Grade 7 - TOP 8 OVERALL</li>
+            <li>Grade 8 - WITH HONORS</li>
+            <li>Grade 9 - WITH HONORS</li>
+            <li>Grade 10 - WITH HONORS</li>
+            <li>Grade 11 - WITH HONORS</li>
+            <li>Grade 12 ICT - TOP 1</li>
+          </ul>
+          <div class="media-gallery">
+            <a href="medalsss.jpg"> <img src="medalsss.jpg" alt="Academic Medals Image"></a>
+            <a href="talk2.jpg"> <img src="talk2.jpg" alt="My Graduation Talk Image"></a>
+          </div>
+        </div>
+
+     
+        <div class="achievement-section">
+          <h3> 🏀 Basketball Achievements </h3>
+          <ul class="achievement-list">
+            <li> 2nd Place - Inter-Color Brgy. 642 </li>
+            <li> 2nd Place - ASAM </li>
+            <li> Best Defender - LCCM - SportsFest (2024-2025) </li>
+            <li> CHAMPION & Finals MVP - LCCM SportsFest (2019-2020) </li>
+            <li> Mythical 5 - LCCM SportsFest (2019-2020) </li>
+            <li> 1st place - LCCM SportsFest (2018-2019) </li>
+          </ul>
+          <div class="media-gallery basketball-media">
+            <div class="large-img">
+              <a href="2nd runner up interbrgy.jpg"> <img src="2nd runner up interbrgy.jpg" alt="2nd Runner-Up Inter-Baranggay Image"></a>
+            </div>
+            <div class="basket-small-pair">
+              <a href="champion sportsfest.jpg"> <img src="champion sportsfest.jpg" alt="Champion Medal Sportsfest Image"></a>
+              <a href="champion mvp intrams trophy.jpg"> <img src="champion mvp intrams trophy.jpg" alt="Champion Sportsfest Trophy Image"></a>
+            </div>
+            <div class="large-img">
+              <a href="espejo5.jpg"> <img src="espejo5.jpg" alt="My Jersey Image"></a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="achievement-section">
+          <h3> ♟️ Chess Achievements </h3>
+          <ul class="achievement-list">
+            <li> 2nd Place - LCCM Sportsfest (2024-2025) </li>
+            <li> Champion - LCCM Online Chess Tournament (2022) </li>
+            <li> Champion - LCCM Online Chess Tournament (2021) </li>
+            <li> Champion - LCCM Sportsfest (2019-2020) </li>
+          </ul>
+          <div class="media-gallery">
+            <a href="1st place sportsfest.jpg"> <img src="1st place sportsfest.jpg" alt="1st Place Chess Sportfest Image"></a>
+            <a href="chesss.jpg"> <img src="chesss.jpg " alt="Playing Chess in Luneta Image"></a>
+          </div>
+        </div>
+
+       
+        <div class="achievement-section">
+          <h3> 🏐 Volleyball Achievements </h3>
+          <ul class="achievement-list">
+            <li> 1st Place - LCCM Intramurals (2024) </li>
+            <li> 3rd Place - LCCM Intramurals (2023) </li>
+          </ul>
+          <div class="media-gallery">
+            <video controls>
+              <source src="volleyballvid.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        
+        <div class="achievement-section">
+          <h3>🧩 Rubik's Cube Achievements </h3>
+          <ul class="achievement-list">
+            <li> Champion - LCCM Rubik's Cube Tournament (2024) </li>
+            <li> 1st Place - LCCM Rubik's Cube Tournament (2023) </li>
+          </ul>
+          <div class="media-gallery">
+            <a href="rubikscube.jpg"> <img src="rubikscube.jpg" alt="Rubiks Cube Collection Image"></a>
+            <a href="rubiks cube.jpg"> <img src="rubiks cube.jpg" alt="Rubiks Cube Medals Image"></a>
+          </div>
+        </div>
+
+        
+        <div class="achievement-section">
+          <h3> 🎮 Games Achievements </h3>
+          <ul class="achievement-list">
+            <li>Top 81 World Ranking - Ling</li>
+            <li>Top 30 Metro Manila - Fanny</li>
+            <li>Top 17 Metro Manila - Kimmy</li>
+            <li>Top 15 Metro Manila - Harith</li>
+          </ul>
+          <div class="media-gallery">
+            <a href="ling.jpg"><img src="ling.jpg" alt="ML Hero Ling Achievement Image"></a>
+            <a href="fanny.jpg"><img src="fanny.jpg" alt="ML Fanny Achievement Image"></a>
+            <a href="kimmyy.jpg"><img src="kimmyy.jpg" alt="ML Kimmy Achievement Image"></a>
+            <a href="harithh.jpg"><img src="harithh.jpg" alt="ML Harith Achievement Image"></a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <div id="lightbox">
+    <span class="close">&times;</span>
+    <img src="" alt="Preview">
+  </div>
+
+
+  <footer class="yellow">
+    <span class="whitename"> Xander Nazzer D. Espejo </span>
+    <span class="separator"> | </span>
+    Bachelor of Science in Computer Science
+  </footer>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const closeBtn = lightbox.querySelector('.close');
+
+    document.querySelectorAll('.media-gallery a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        lightbox.style.display = 'block';
+        lightboxImg.src = link.href;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+    });
+
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+      }
+    });
+  </script>
+
+</body>
+
+</html>
